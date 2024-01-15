@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='add_date.css') }}">
+    <title>Add Watering Date</title>
+</head>
+<body>
+    <h1>Add Watering Date for {{ plant.name }}</h1>
+    <form action="{{ url_for('add_date', plant_id=plant.id) }}" method="post">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <input type="submit" value="Add Date">
+    </form>
+</body>
+</html>

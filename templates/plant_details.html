@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Plant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='plant_details.css') }}">
+</head>
+<body>
+    <h1>{{ plant.name }} - Watering Dates</h1>
+        {% for date in plant.dates %}
+        <li>
+            {{ date.date }}
+            <form action="{{ url_for('delete_watering_date', watering_date_id=date.id) }}" method="post" style="display: inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    
+
+    <p id="recc">Next Recommended Date: {{ next_recommended_date }}</p>
+
+
+    <a href="{{ url_for('index', plant_id=plant.id) }}">My Plants</a>
+    <a href="{{ url_for('add_date', plant_id=plant.id) }}">Add New Date</a>
+</body>
+</html>

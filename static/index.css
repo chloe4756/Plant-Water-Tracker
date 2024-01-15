@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D2B48C;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #3A6B35;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px; 
+    width: 95%;
+    margin: auto; 
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-container {
+    order: 2; 
+    flex: 1;
+}
+
+.right-container {
+    order: 1; 
+    flex: 3;
+}
+
+/* Existing styles */
+.weatherInput, .weatherBtn {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.weatherBtn {
+    background-color: #3A6B35;
+    color: white;
+    cursor: pointer;
+}
+
+.temp, .waterRecc {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#plants-list {
+    list-style: none;
+    padding-left:40px;
+}
+
+#plants-list li {
+    background-color: #e8e8e8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+#plants-list strong {
+    color: #333;
+}
+
+#plants-list a {
+    text-decoration: none;
+    color: #5C6BC0;
+    margin-right: 15px;
+}
+
+#plants-list form {
+    display: inline;
+}
+
+.add-plant-link {
+    display: block;
+    width: 200px;
+    margin: 20px; 
+    margin-left: 40px; 
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+.water-all-button {
+    display: block;
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

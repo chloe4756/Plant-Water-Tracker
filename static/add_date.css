@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D2B48C;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #3A6B35;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+label {
+    display: block; 
+    margin-top: 10px;
+}
+
+input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+input[type="submit"]:hover {
+    background-color: #3A6B35;
+}

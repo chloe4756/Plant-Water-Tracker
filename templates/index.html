@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Watering Schedule</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="main-container">
+    <h1>My Plants</h1>
+    <div class="content-container">
+    <div class="left-container">
+        <input class="weatherInput" type="text" placeholder="Enter Your Current Location To See The Weather">
+        <input class="weatherBtn" type="submit" value="Search" />
+    
+    <p class="temp">The Current Weather is: </p>
+    <p class="waterRecc"></p>
+</div>
+    <div class="right-container">
+    <ul id="plants-list">
+        {% for plant in plants %}
+        <li>
+            <strong>{{ plant.name }}</strong>
+            <br>
+            <strong>Days Between Watering: {{ plant.watering_interval }}</strong>
+            <br>
+            <strong>Location: {{ plant.plant_type }} </strong>
+            <br>
+            <strong>Next Recommended Date:  {{ plant.next_watering_date()  }}</strong>
+            - <a href="{{ url_for('view_plant', plant_id=plant.id) }}">View Dates</a>
+            - <a href="{{ url_for('add_date', plant_id=plant.id) }}">Add Date</a>
+            <form action="{{ url_for('delete_plant', plant_id=plant.id) }}" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    </div>
+    </div>
+</div>
+    <a class="add-plant-link" href="/create_plant">Add New Plant</a>
+    <form action="{{ url_for('add_date_to_all') }}" method="post">
+        <button class="water-all-button" type="submit">Water All Outdoor Plants</button>
+    </form>
+    
+</body>
+<script src="static/weather.js"></script>
+</html>

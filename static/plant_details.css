@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D2B48C;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #3A6B35;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    width: 95%;
+    margin: auto;
+}
+
+li {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #fff;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#recc {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+a, .add-plant-link {
+    display: block;
+    width: 200px;
+    margin: 20px;
+    margin-left: 40px;
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}

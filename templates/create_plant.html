@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Plant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='create_plant.css') }}">
+</head>
+<body>
+    <h1>Add New Plant</h1>
+    <form action="{{ url_for('create_plant') }}" method="post">
+        <label for="name">Plant Name:</label>
+        <input type="text" id="name" name="name" placeholder="Rose" required>
+        <input type="number" id="water" name="water" placeholder="Days Between Watering" required>
+        <label for="plant_type">Plant Type:</label>
+        <select id="plant_type" name="plant_type" required>
+            <option value="indoor">Indoor</option>
+            <option value="outdoor">Outdoor</option>
+        </select>
+        <input type="submit" value="Add Plant">
+
+    </form>
+</body>
+</html>
